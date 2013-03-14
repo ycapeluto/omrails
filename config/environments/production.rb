@@ -64,4 +64,11 @@ Omrails::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Yaniv: (line taken from device gem generate)
+  # this defins the base URL for links that are sent to users
+  # in production the host shuld be set the the production host
+  # Original line: config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'radiant-refuge-2151.herokuapp.com' }
+
 end

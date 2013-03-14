@@ -34,4 +34,9 @@ Omrails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Yaniv: (line taken from device gem generate)
+  # this defins the base URL for links that are sent to users
+  # in production the host shuld be set the the production host
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
