@@ -1,5 +1,7 @@
 class PinsController < ApplicationController
-  before_filter :authenticate_user!
+ 
+ # Yaniv - if you would like to force authentication on the home page applay this filter 
+ # before_filter :authenticate_user!
 
   # GET /pins
   # GET /pins.json
