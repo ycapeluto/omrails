@@ -1,4 +1,6 @@
 Omrails::Application.routes.draw do
+  resources :authentications
+
   get "users/show"
 
   get "user/show"
@@ -11,6 +13,10 @@ Omrails::Application.routes.draw do
   get 'about' => 'pages#about'
 
   root :to => 'pins#index'
+
+  #Yaniv - omniauth route for call back by provider
+  
+  match '/auth/:provider/callback' => 'authentications#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

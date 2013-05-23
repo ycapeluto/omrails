@@ -9,6 +9,11 @@ gem 'aws-sdk'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'mocha'
+
 
 group :production do
 	gem 'pg'
@@ -16,6 +21,9 @@ end
 
 group :development, :test do
 	gem 'sqlite3'
+	# Yaniv - nifty-generators A collection of useful Rails generator scripts for 
+	# scaffolding, layout files, authentication, and more
+	gem 'nifty-generators'
 end
 
 group :assets do
@@ -39,3 +47,5 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+gem "mocha", :group => :test
